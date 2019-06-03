@@ -70,8 +70,14 @@ else:
 
 if lg == "en":
 	prints("Plotting data. Please wait...")
-	prints("Hello, {}%.\n\nWe will be helping you in your {} with {} square meters.\nPlease choose the option below wisely so your designated {} investiment does not extrapolate you {} income.").format(name,home,home_size,designated,income)
+	prints("Hello, {}.\n\nWe will be helping you in your {} with {} square meters.\nPlease choose the option below wisely so your designated {} investiment does not extrapolate you {} income.".format(name,home,home_size,designated,income))
 else:
 	prints("Plotando dados. Por favor aguarde...")
-	prints("Olá, {}%.\n\nNós iremos te ajudar com sua/seu {} que possui {} metros quadradoss.\nPor favor escolha as opções abaixo com cuidado para que sua renda de investimento de {} nao extrapole sua receita de {}.").format(name,home,home_size,designated,income)
+	prints("Olá, {}.\n\nNós iremos te ajudar com sua/seu {} que possui {} metros quadradoss.\nPor favor escolha as opções abaixo com cuidado para que sua renda de investimento de {} nao extrapole sua receita de {}.".format(name,home,home_size,designated,income))
+
+
+user = []
+
+
+
 
