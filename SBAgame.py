@@ -6,11 +6,17 @@ lg = ""
 home = ""
 speed = 50
 
+colors = {             
+    'RED': '\033[91m',     
+    'GREEN': '\033[92m',   
+    'END': '\033[0m',      
+}
+
 def prints(words,*args,**kwargs):
     for word in words:
         sys.stdout.write(word)
         sys.stdout.flush()
-        time.sleep(random.random()*8.0/speed)
+        time.sleep(random.random()*0.1/speed) #real: 8.0
     print ('')
 
 while lg != "en" or "pt":
@@ -76,7 +82,89 @@ else:
 	prints("Olá, {}.\n\nNós iremos te ajudar com sua/seu {} que possui {} metros quadradoss.\nPor favor escolha as opções abaixo com cuidado para que sua renda de investimento de {} nao extrapole sua receita de {}.".format(name,home,home_size,designated,income))
 
 
-user = []
+user = [
+[name,home,home_size,designated,income]
+]
+
+water_solutions = [
+['1','Baixo','Captação de água de chuva','Borda do telhado','Garrafas PET, canos e reservatório','Menos de 1 mês'],
+['2','Médio','Aparelho de condensação','2m²','Compra do aparelho','Menos de 1 mês'],
+['99','Alto','Aparelho de condensação','2m²','Compra do aparelho','Menos de 1 mês'],
+
+]
+
+
+food_solutions = [
+
+]
+
+energy_solutions = [
+
+]
+
+automation_solutions = [
+
+]
+
+
+prints("O que deseja fazer agora?\n")
+
+print ("1 - Quero produzir minha própria água\n2 - Quero produzir minha própria comida\n3 - Quero produzir minha própria enegia elétrica\n4 - Quero automatizar processos\n5 - Ver/Editar meus dados\n6 - Ver/Editar minhas soluções\n7 - Executar solução")
+
+phase1_selector = int(input('Opção:'))
+
+phase1_title = ("{GREEN} : ID  : Custo  : Solução                    : Espaço                 : Recursos necessários                           : Tempo necessário : {END}".format(**colors))
+
+print (phase1_title)
+
+
+if phase1_selector == 1:
+	for sol in water_solutions:
+		print (" :",sol[0]," "*(2-len(sol[0])),":",
+					sol[1]," "*(5-len(sol[1])),":",
+					sol[2]," "*(25-len(sol[2])),":",
+					sol[3]," "*(21-len(sol[3])),":",
+					sol[4]," "*(45-len(sol[4])),":",
+					sol[5]," "*(15-len(sol[5])),": ")
+		
+else:
+	print ('bugando')
+
+
+
+sol_selector = input("Selecione o ID da solução:")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
