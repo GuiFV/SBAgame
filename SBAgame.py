@@ -16,7 +16,7 @@ def prints(words,*args,**kwargs):
     for word in words:
         sys.stdout.write(word)
         sys.stdout.flush()
-        time.sleep(random.random()*0.1/speed) #real: 8.0
+        time.sleep(random.random()*8.0/speed) #0.1 / 8.0
     print ('')
 
 while lg != "en" or "pt":
